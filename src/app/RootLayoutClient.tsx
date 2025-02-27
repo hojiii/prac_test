@@ -6,6 +6,7 @@ import theme from "./styles/theme";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { LayoutProvider } from "./provider/LayoutContect";
 import ReduxProvider from "./provider/Redux-Provider";
+import Header from "./components/common/header/Header";
 
 export default function RootLayoutClient({
   children,
@@ -19,6 +20,7 @@ export default function RootLayoutClient({
           <ThemeProvider theme={theme}>
             <GlobalStyle />
             <LayoutProvider>
+              <Header />
               <ReduxProvider>{children}</ReduxProvider>
             </LayoutProvider>
           </ThemeProvider>
