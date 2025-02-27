@@ -26,8 +26,8 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: auto;
     font-family: 'Noto Sans KR', sans-serif;
-    background-color: ${({ theme: { colors } }) => colors.body};
-    color: ${({ theme: { colors } }) => colors.black};
+    background-color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.white};
     height: 100%;
     ${ScrollBar};
   }

@@ -7,6 +7,9 @@ const nextConfig = {
       minify: true, // 코드 최적화
     },
   },
+  images: {
+    domains: ["thumbnail.laftel.net"],
+  },
 };
 
 export default nextConfig;

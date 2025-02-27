@@ -6,7 +6,7 @@ const theme: DefaultTheme = {
     footer: "#32334a",
     white: "#fff",
     cream: "#eeeeee",
-    black: "#121212",
+    black: "#000000",
     lightBlack: "#191b2a",
     gray: "#505050",
     lightGray: "#8a8a8a",

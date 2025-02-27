@@ -13,7 +13,7 @@ export default function RootLayoutClient({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
+    <html>
       <body>
         <StyledComponentsRegistry>
           <ThemeProvider theme={theme}>
