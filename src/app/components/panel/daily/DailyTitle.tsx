@@ -1,13 +1,8 @@
 "use client";
 import React, { FC } from "react";
-import {
-  DailyPanelContainer,
-  DailyPanelTitleBox,
-  DailyPanelTitle,
-} from "./styled";
-interface Props {}
+import { DailyPanelTitle } from "./styled";
 
-const DailyTitle: FC<Props> = () => {
+const DailyTitle: FC = () => {
   return (
     <>
       <DailyPanelTitle>

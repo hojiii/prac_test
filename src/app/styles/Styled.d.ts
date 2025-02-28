@@ -27,4 +27,7 @@ declare module "styled-components" {
       nowPlayHover: "#7963ff";
     };
   }
+  export interface AspectRatioProps {
+    aspectRatio?: number;
+  }
 }

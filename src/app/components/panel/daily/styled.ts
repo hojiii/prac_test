@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { AspectRatioProps } from "styled-components";
 
 export const DailyPanelContainer = styled.div`
   display: flex;
@@ -85,5 +85,71 @@ export const DailyWeekBoxContainer = styled.div`
       text-align: center;
       color: ${({ theme }) => theme.colors.white};
     }
+  }
+`;
+export const DatilListContainer = styled.div`
+  osition: relative;
+  width: 100%;
+   
+  }
+`;
+export const DailyItemContainer = styled.ol`
+  width: 100%;
+  display: flex;
+  gap: 0.375em;
+  flex-wrap: nowrap;
+  min-height: 14em;
+  overflow-x: visible;
+  transform: translate3d(0em, 0px, 0px);
+`;
+export const DailyItemBox = styled.li`
+  flex: 0 0 18.625em;
+  width: 18.625em;
+  scroll-snap-align: start;
+  position: relative;
+  padding-top: 20px;
+`;
+export const DailyItemImgBox = styled.div`
+  display: block;
+  position: relative;
+  width: 100%;
+  &:hover img {
+    transform: scale(1.05);
+  }
+`;
+export const DailyItemImg = styled.div<AspectRatioProps>`
+  width: 100%;
+  z-index: 0;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.25em;
+  padding-bottom: 55.7047%;
+  aspect-ratio: ${({ aspectRatio }) => aspectRatio || "auto"};
+  div {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+`;
+export const DailyImg = styled.picture`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+`;
+
+export const TitleBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.25rem;
+  opacity: 1;
+  padding-right: 0.5rem;
+  min-height: 3.375em;
+  p {
+    color: ${({ theme }) => theme.colors.white};
+    font-weight: 400;
+    font-size: 1.125em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    overflow-wrap: break-word;
   }
 `;

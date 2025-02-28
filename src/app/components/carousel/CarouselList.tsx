@@ -37,7 +37,7 @@ const CarouselList: FC = () => {
 
   const getCarousel = async () => {
     try {
-      const res = await fetch("/api/carousel");
+      const res = await fetch("/api/carouselRoute");
       const data = await res.json();
       console.log("Carousel Data:", data);
       setCarousel(data);

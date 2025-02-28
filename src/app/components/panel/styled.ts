@@ -8,7 +8,6 @@ export const PanelListContainer = styled.div`
   padding-top: 2.5em;
   padding-bottom: 4rem;
   overflow-x: hidden;
-  border: 1px solid white;
   font-size: 0.82646vw;
   @media (max-width: 1920px) {
     font-size: calc(0.82646vw + 0.1rem);

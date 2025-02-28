@@ -2,9 +2,8 @@
 import React, { FC } from "react";
 import { PanelListContainer } from "./styled";
 import DailyPanel from "./daily/DailyPanel";
-interface Props {}
 
-const PanelList: FC<Props> = () => {
+const PanelList: FC = () => {
   return (
     <>
       <PanelListContainer>
