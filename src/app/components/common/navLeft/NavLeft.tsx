@@ -3,7 +3,7 @@ import { Logo } from "../logo/Logo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export function NavLeftList({ isScroll }: { isScroll: boolean }) {
+export function NavLeftList() {
   const pathname = usePathname();
 
   const texts = [
@@ -24,7 +24,7 @@ export function NavLeftList({ isScroll }: { isScroll: boolean }) {
   ));
 
   return (
-    <S.NavList {...{ isScroll }}>
+    <S.NavList>
       <li>
         <h1>
           <Logo />

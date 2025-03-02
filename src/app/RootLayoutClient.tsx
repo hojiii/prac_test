@@ -7,6 +7,7 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 import { LayoutProvider } from "./provider/LayoutContect";
 import ReduxProvider from "./provider/Redux-Provider";
 import Header from "./components/common/header/Header";
+import ModalContainer from "./components/modal/ModalContainer";
 
 export default function RootLayoutClient({
   children,
@@ -21,7 +22,10 @@ export default function RootLayoutClient({
             <GlobalStyle />
             <LayoutProvider>
               <Header />
-              <ReduxProvider>{children}</ReduxProvider>
+              <ReduxProvider>
+                {children}
+                <ModalContainer />
+              </ReduxProvider>
             </LayoutProvider>
           </ThemeProvider>
         </StyledComponentsRegistry>

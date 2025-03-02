@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const NavList = styled.ul<{ isScroll: boolean }>`
+export const NavList = styled.ul`
   padding-left: 5rem;
   gap: 2.4rem;
   display: flex;
@@ -9,8 +9,7 @@ export const NavList = styled.ul<{ isScroll: boolean }>`
   li {
     a {
       &:hover {
-        color: ${({ isScroll, theme }) =>
-          isScroll ? theme.colors.gray : theme.colors.hoverPurPle};
+        color: ${({ theme }) => theme.colors.gray};
       }
     }
   }

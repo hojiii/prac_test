@@ -1,12 +1,10 @@
 import Link from "next/link";
 import * as S from "./Styled";
 
-export function Logo({ color = "white", login = false, auth = false }) {
+export function Logo({ color = "white" }) {
   return (
     <Link href="/">
       <S.Svg
-        {...{ login }}
-        {...{ auth }}
         width="72"
         height="24"
         viewBox="0 0 72 24"

@@ -5,9 +5,9 @@ import { NavLeftList } from "../navLeft/NavLeft";
 
 const Header: FC = () => {
   return (
-    <S.Header isScroll={false}>
+    <S.Header>
       <S.Nav>
-        <NavLeftList isScroll={false} />
+        <NavLeftList />
         {/* <NavRightList isScroll={false} /> */}
       </S.Nav>
     </S.Header>

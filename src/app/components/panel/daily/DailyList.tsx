@@ -12,12 +12,21 @@ import {
 import { DailyItem } from "./types/types";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface DailyListProps {
   dailyList: DailyItem[];
 }
 
 const DailyList: FC<DailyListProps> = ({ dailyList }) => {
+  const router = useRouter();
+
+  const handleItemClick = (item: DailyItem) => {
+    router.push(`/detailModal?modal=${item.id}`, {
+      scroll: false,
+    });
+  };
+
   React.useEffect(() => {
     console.log(dailyList);
   }, [dailyList]);
@@ -29,15 +38,16 @@ const DailyList: FC<DailyListProps> = ({ dailyList }) => {
           // 좌표 데이터 파싱
           const [x, y, width, height] = item.cropped_img.split(",").map(Number);
 
-          // 크롭된 이미지 비율 계산
-          const aspectRatio = (width - x) / (height - y);
-
           return (
             <DailyItemBox key={item.id}>
-              <div>
-                <Link id={item.name} href="/">
+              <div onClick={() => handleItemClick(item)}>
+                <Link
+                  id={item.name}
+                  href={`/?modal=${item.id}`}
+                  scroll={false} // 페이지 스크롤 방지
+                >
                   <DailyItemImgBox>
-                    <DailyItemImg aspectRatio={aspectRatio}>
+                    <DailyItemImg>
                       <DailyImg>
                         <Image
                           src={item.images[0].img_url}

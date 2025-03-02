@@ -1,31 +1,32 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-const HeaderScroll = css`
-  background-color: ${({ theme: { colors } }) => colors.white};
-  box-shadow: 0 1px 0 0 ${({ theme: { colors } }) => colors.cream};
+// const HeaderScroll = css`
+//   background-color: ${({ theme: { colors } }) => colors.white};
+//   box-shadow: 0 1px 0 0 ${({ theme: { colors } }) => colors.cream};
 
-  & a {
-    color: ${({ theme: { colors } }) => colors.black};
-  }
-`;
+//   & a {
+//     color: ${({ theme: { colors } }) => colors.black};
+//   }
+// `;
 
-const HeaderNotScroll = css`
-  background-color: transparent;
+// const HeaderNotScroll = css`
+//   background-color: transparent;
 
-  & a {
-    color: ${({ theme: { colors } }) => colors.white};
-  }
-`;
+//   & a {
+//     color: ${({ theme: { colors } }) => colors.white};
+//   }
+// `;
 
-export const Header = styled.header<{ isScroll: boolean }>`
+export const Header = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10000;
   font-size: 3rem;
   transition: all 0.3s linear;
-
-  ${({ isScroll }) => (isScroll ? HeaderScroll : HeaderNotScroll)}
+  a {
+    color: ${({ theme: { colors } }) => colors.white};
+  }
 `;
 
 export const Nav = styled.nav`

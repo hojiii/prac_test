@@ -25,7 +25,11 @@ const DailyWeekBox: FC<DailyWeekBoxProps> = ({ onChangeButton }) => {
     setSelectedButton(dayId);
   };
   React.useEffect(() => {
-    onChangeButton(initButton[selectedButton - 1].fullName);
+    if (selectedButton === 0) {
+      onChangeButton(initButton[6].fullName);
+    } else {
+      onChangeButton(initButton[selectedButton - 1].fullName);
+    }
   }, []);
 
   return (

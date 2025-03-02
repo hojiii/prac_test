@@ -55,6 +55,7 @@ export const DailyWeekBoxContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   width: 37.5em;
   padding-top: 0.5em;
   padding-bottom: 1.5em;
@@ -73,10 +74,6 @@ export const DailyWeekBoxContainer = styled.div`
     &.active {
       background-color: ${({ theme }) => theme.colors.purple};
       color: ${({ theme }) => theme.colors.white};
-    }
-
-    &:not(:first-child) {
-      margin-left: 1.875em;
     }
 
     span {
